@@ -6,4 +6,10 @@
 //  Copyright © 2018 Livia Vasconcelos. All rights reserved.
 //
 
-import Foundation
+public enum CallbackEnum: String {
+    case success     = "success"
+    case failed      = "failed"
+    case onLoaded    = "onLoaded"
+    case onAction    = "onAction"
+    case onEmptyData = "onEmptyData"
+}
