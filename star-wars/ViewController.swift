@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        namesTableView.accessibilityIdentifier = "tableView"
         namesTableView.delegate   = self
         namesTableView.dataSource = self
         

@@ -15,6 +15,8 @@
 		536A9231218F19E600155F89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 536A922F218F19E600155F89 /* LaunchScreen.storyboard */; };
 		536A923C218F19E600155F89 /* star_warsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A923B218F19E600155F89 /* star_warsTests.swift */; };
 		536A9247218F19E600155F89 /* star_warsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536A9246218F19E600155F89 /* star_warsUITests.swift */; };
+		53D0516022524BDE0021E479 /* ListUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D0515F22524BDE0021E479 /* ListUITest.swift */; };
+		53D0516222524C260021E479 /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D0516122524C260021E479 /* ListScreen.swift */; };
 		53D93FE4218F214F0083D0B6 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D93FE3218F214F0083D0B6 /* APIHandler.swift */; };
 		53D93FE6218F25D50083D0B6 /* PersonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D93FE5218F25D50083D0B6 /* PersonResponse.swift */; };
 		53D93FE8218F2D070083D0B6 /* BasePeopleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D93FE7218F2D070083D0B6 /* BasePeopleResponse.swift */; };
@@ -58,6 +60,8 @@
 		536A9242218F19E600155F89 /* star-warsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "star-warsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		536A9246218F19E600155F89 /* star_warsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = star_warsUITests.swift; sourceTree = "<group>"; };
 		536A9248218F19E600155F89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53D0515F22524BDE0021E479 /* ListUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUITest.swift; sourceTree = "<group>"; };
+		53D0516122524C260021E479 /* ListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
 		53D93FE3218F214F0083D0B6 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		53D93FE5218F25D50083D0B6 /* PersonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonResponse.swift; sourceTree = "<group>"; };
 		53D93FE7218F2D070083D0B6 /* BasePeopleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePeopleResponse.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 			children = (
 				536A9246218F19E600155F89 /* star_warsUITests.swift */,
 				536A9248218F19E600155F89 /* Info.plist */,
+				53D0515F22524BDE0021E479 /* ListUITest.swift */,
+				53D0516122524C260021E479 /* ListScreen.swift */,
 			);
 			path = "star-warsUITests";
 			sourceTree = "<group>";
@@ -359,13 +365,17 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-star-wars/Pods-star-wars-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SWHttpTrafficRecorder/SWHttpTrafficRecorder.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWHttpTrafficRecorder.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -421,6 +431,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				536A9247218F19E600155F89 /* star_warsUITests.swift in Sources */,
+				53D0516222524C260021E479 /* ListScreen.swift in Sources */,
+				53D0516022524BDE0021E479 /* ListUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

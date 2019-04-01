@@ -1,0 +1,6 @@
+framework module SWHttpTrafficRecorder {
+  umbrella header "SWHttpTrafficRecorder-umbrella.h"
+
+  export *
+  module * { export * }
+}

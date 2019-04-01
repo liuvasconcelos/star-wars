@@ -7,16 +7,41 @@
 //
 
 import UIKit
+import SWHttpTrafficRecorder
+import OHHTTPStubs
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+   
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        if isTestEnvironment() {
+            stub(condition: isHost("swapi.co") && isPath("/api/people")) { _ in
+                let person1 = ["name": "name 1", "mass": "mass 1", "height": "height 1"]
+                let person2 = ["name": "name 2", "mass": "mass 2", "height": "height 2"]
+                let person3 = ["name": "name 3", "mass": "mass 3", "height": "height 3"]
+
+                let people = [person1, person2, person3]
+            
+                let obj = ["count":2, "next":"huaha", "previous": nil, "results": people] as! [String : Any]
+                return OHHTTPStubsResponse(jsonObject: obj, statusCode: 200, headers: nil)
+            }
+        }
+        
         return true
+    }
+    
+    fileprivate func isTestEnvironment() -> Bool {
+        let environment = ProcessInfo().environment
+        
+        if environment["TESTING"] == "YES" {
+            return true
+        }
+        
+        return false
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -38,6 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
+         OHHTTPStubs.removeAllStubs()
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
